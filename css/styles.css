@@ -41,7 +41,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 244, 98, 58;
+  --bs-primary-rgb: 255, 255, 255;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -50,6 +50,7 @@
   --bs-light-rgb: 248, 249, 250;
   --bs-dark-rgb: 33, 37, 41;
   --bs-white-rgb: 255, 255, 255;
+  --bs-purple-rgb:  168, 94, 225;
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
@@ -118,6 +119,11 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 h1, .h1 {
   font-size: calc(1.375rem + 1.5vw);
 }
+
+h1{
+  font-size: 300%;
+}
+
 @media (min-width: 1200px) {
   h1, .h1 {
     font-size: 2.5rem;
@@ -1399,14 +1405,28 @@ progress {
     width: 50%;
   }
 
+  .col-lg-6 .profileImg{
+    padding-top: 5%;
+    width: 150px;
+    float: left;
+  }
+
   .col-lg-6 .profile{
-    margin-left: 250px;
+    margin-left: 20%;
     padding-top: 10px;
     font-size:  1.2rem;
     line-height: 170%;
+    float: left;
+    
   }
 
-  .col-lg-6 .profile. ul li{
+  .col-lg-6 .profile h2{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .col-lg-6 .profile. p{
+    text-align: center;
     list-style: none;
   }
 
@@ -7710,6 +7730,8 @@ textarea.form-control-lg {
   text-align: center !important;
 }
 
+
+
 .text-decoration-none {
   text-decoration: none !important;
 }
@@ -7797,6 +7819,11 @@ textarea.form-control-lg {
 .text-white {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-purple {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-purple-rgb), var(--bs-text-opacity)) !important;
 }
 
 .text-body {
@@ -9833,54 +9860,102 @@ textarea.form-control-lg {
 
 #about .left{
   box-sizing: border-box;
-  padding: 5%;
+  padding: 2%;
   float: left;
-  width: 47vw;
+  width: 25vw;
   text-align: center;
 }
 
 .about .left img {
     width: 100%;
-    margin: 2vh 0;
+    margin: 0;
 }
 
 #about .right{
   font-family: var(--bs-font-monospace) !important;
   float: left;
-  width: 47vw;
+  width: 50vw;
   text-align: center;
+  margin-left: 10%;
 }
 
 #about .right .contentsBox{
   float: left;
   padding-top: 5%;
-  margin-top: 6.5vh;
+  margin-top: 4vh;
+  margin-right: 33px;
+}
+
+#about .center{
+  margin-top: 50px;
+  text-align: center;
+  width: 40%;
+  padding-left: 20%;
+}
+
+.center .contentsBox .box h2{
+  font-size: 1.5vw;
+  line-height: 1.5;
+}
+
+#about .center .box .txtBox{
+  float: left;
+  padding-top: 5%;
+  margin-top: 3vh;
+}
+
+#about .center .box .txtBox-value{
+  float: left;
+  padding-top: 5%;
+  margin-top: 3vh;
 }
 
 #about .right .box h2{
-  font-size: 1.2vw;
+  font-size: 1.5vw;
   line-height: 1.5;
-  text-align: left;
+  text-align: center;
 }
 
 #about .right .box > div:nth-of-type(1){
   font-size: 1vw;
   letter-spacing: 0.5px;
   text-align: left;
+  color: rgb(244, 98, 58);
 }
 
 #about .right .box > div:nth-of-type(2){
   font-size: 1.2vw;
   font-weight: 900;
   font-family: jua !important;
-  color: rgba(255, 255, 255, 9);
+  color: rgba(0, 0, 0, 9);
   letter-spacing: 0.5px;
 }
 
 #about .right .box .txtBox{
   margin-bottom: 20px;
   line-height: 35px;
+  padding-right: 10px;
 }
+
+#about .right .box .txtBox-value{
+  margin-bottom: 20px;
+  line-height: 35px;
+  padding-right: 1px;
+}
+
+#about .right .box h2{
+  text-align: center;
+}
+
+#about .right .box .txtBox p{
+  font-size: 110%;
+}
+
+#about .right .box .txtBox-value p{
+  font-size: 90%;
+  text-align: left;
+}
+
 
 #about .right .box > div{
   float: left;
